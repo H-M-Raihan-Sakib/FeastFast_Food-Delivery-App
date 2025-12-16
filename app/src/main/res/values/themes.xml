@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FeastFast" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.FeastFast" parent="Base.Theme.FeastFast" />
+    <!-- Style for the RatingBar to set custom colors for the stars -->
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <!-- Color for inactive/unselected stars -->
+        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <!-- Color for active/selected stars -->
+        <item name="colorControlActivated">#FFC107</item> <!-- Gold/Yellow color -->
+    </style>
+
+
+</resources>

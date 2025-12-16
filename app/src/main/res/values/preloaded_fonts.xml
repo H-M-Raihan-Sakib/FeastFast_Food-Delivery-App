@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/aclonica</item>
+        <item>@font/adlam_display</item>
+        <item>@font/alkatra</item>
+        <item>@font/angkor</item>
+        <item>@font/aoboshi_one</item>
+        <item>@font/flato</item>
+    </array>
+</resources>

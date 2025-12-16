@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Fragment.HistoryFragment">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="History"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Recent Buy Label -->
+    <TextView
+        android:id="@+id/textViewRecent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Recent Buy"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <!-- 1. FOOD DETAILS CARD -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewRecent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRecent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/buyAgainFoodImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/buyAgainFoodName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Food Name"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/buyAgainFoodPrice"
+                app:layout_constraintStart_toEndOf="@+id/buyAgainFoodImage"
+                app:layout_constraintTop_toTopOf="@+id/buyAgainFoodImage" />
+
+            <TextView
+                android:id="@+id/buyAgainFoodPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$00"
+                android:textColor="#4CAF50"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/buyAgainFoodName" />
+
+            <!-- Order Status Badge -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/orderStatus"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/greenbutton"
+                android:text="Pending"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/buyAgainFoodName"
+                app:layout_constraintTop_toBottomOf="@+id/buyAgainFoodName" />
+
+            <!-- Chat Button -->
+            <ImageButton
+                android:id="@+id/chatWithUs"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/chat_round_dots_svgrepo_com"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buyAgainFoodPrice" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Support"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/chatWithUs"
+                app:layout_constraintStart_toStartOf="@+id/chatWithUs"
+                app:layout_constraintTop_toBottomOf="@+id/chatWithUs" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 2. ORDER TRACKING CARD (Accepted -> Sent -> Payment) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewOrderStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewRecent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- STEP 1: ACCEPTED -->
+            <ImageView
+                android:id="@+id/statusImageAccepted"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/shape_status_inactive"
+                app:layout_constraintEnd_toStartOf="@+id/statusImageSent"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/statusLabelAccepted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Accepted"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/statusImageAccepted"
+                app:layout_constraintStart_toStartOf="@+id/statusImageAccepted"
+                app:layout_constraintTop_toBottomOf="@+id/statusImageAccepted" />
+
+            <!-- LINE 1 -->
+            <View
+                android:id="@+id/statusLine1"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="#E0E0E0"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/statusImageAccepted"
+                app:layout_constraintEnd_toStartOf="@+id/statusImageSent"
+                app:layout_constraintStart_toEndOf="@+id/statusImageAccepted"
+                app:layout_constraintTop_toTopOf="@+id/statusImageAccepted" />
+
+            <!-- STEP 2: SENT -->
+            <ImageView
+                android:id="@+id/statusImageSent"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/shape_status_inactive"
+                app:layout_constraintEnd_toStartOf="@+id/statusImagePayment"
+                app:layout_constraintStart_toEndOf="@+id/statusImageAccepted"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/statusLabelSent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Sent"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/statusImageSent"
+                app:layout_constraintStart_toStartOf="@+id/statusImageSent"
+                app:layout_constraintTop_toBottomOf="@+id/statusImageSent" />
+
+            <!-- LINE 2 -->
+            <View
+                android:id="@+id/statusLine2"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="#E0E0E0"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/statusImageSent"
+                app:layout_constraintEnd_toStartOf="@+id/statusImagePayment"
+                app:layout_constraintStart_toEndOf="@+id/statusImageSent"
+                app:layout_constraintTop_toTopOf="@+id/statusImageSent" />
+
+            <!-- STEP 3: PAYMENT -->
+            <ImageView
+                android:id="@+id/statusImagePayment"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/shape_status_inactive"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/statusImageSent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/statusLabelPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Payment"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/statusImagePayment"
+                app:layout_constraintStart_toStartOf="@+id/statusImagePayment"
+                app:layout_constraintTop_toBottomOf="@+id/statusImagePayment" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Previously Buy Label -->
+    <TextView
+        android:id="@+id/textViewPrevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Previously Buy"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewOrderStatus" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/BuyAgainRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrevious" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

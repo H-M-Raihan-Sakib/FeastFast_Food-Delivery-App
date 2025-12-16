@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="textColor">#1FC57A</color>
+    <color name="startColor">#53E88B</color>
+    <color name="endColor">#1EBE77</color>
+    <color name="iconColor">#FEAD1D</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    
+    <!-- SYSTEM COLORS (DAY) -->
+    <color name="main_background">#FFFFFF</color> <!-- White background -->
+    <color name="main_text_color">#000000</color> <!-- Black text -->
+    <color name="card_background">#FFFFFF</color> <!-- White cards -->
+    <color name="hint_color">#808080</color>
+
+
+    <!-- SYSTEM COLORS (NIGHT) -->
+    <!-- <color name="main_background">#121212</color> -->
+ <!-- Very dark grey (Standard Dark Mode BG) -->
+    <!-- <color name="main_text_color">#FFFFFF</color> -->
+ <!-- White text -->
+    <!-- <color name="card_background">#1E1E1E</color> -->
+ <!-- Slightly lighter grey for cards -->
+    <!-- <color name="hint_color">#B0B0B0</color> -->
+
+
+    <!-- SYSTEM COLORS (NIGHT) -->
+    <!-- <color name="main_background">#121212</color> -->
+ <!-- Very dark grey (Standard Dark Mode BG) -->
+    <!-- <color name="main_text_color">#FFFFFF</color> -->
+ <!-- White text -->
+    <!-- <color name="card_background">#1E1E1E</color> -->
+ <!-- Slightly lighter grey for cards -->
+    <!-- <color name="hint_color">#B0B0B0</color> -->
+
+
+    <!-- SYSTEM COLORS (NIGHT) -->
+    <!-- <color name="main_background">#121212</color> -->
+ <!-- Very dark grey (Standard Dark Mode BG) -->
+    <!-- <color name="main_text_color">#FFFFFF</color> -->
+ <!-- White text -->
+    <!-- <color name="card_background">#1E1E1E</color> -->
+ <!-- Slightly lighter grey for cards -->
+    <!-- <color name="hint_color">#B0B0B0</color> -->
+</resources>
