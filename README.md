@@ -1,0 +1,4 @@
+-Go to release tag, and Download FeastFast.zip
+-Unzip
+-install apk
+-Enjoy
